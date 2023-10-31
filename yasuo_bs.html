@@ -1,12 +1,4 @@
-import os
-import console
-iframe = input("iframe/site: ")
-if iframe.startswith("<"):
-    iframe=iframe
-else:
-    iframe = f'<iframe src="{iframe}">'
-embed = input("embed: ")
-htmlbody = (f"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="share.png">
@@ -17,31 +9,19 @@ htmlbody = (f"""<!DOCTYPE html>
     <title>HPMED's board</title>
     </head>
 <style>
-    body {{
+    body {
       background-color: #2c2f33;
-    }}
-    h1{{
+    }
+    h1{
         color: white;
-    }}
+    }
   </style>
 <body>
     <center>
     <h1>Welcome to my board, where I share shit that I think is funny</h1>
-    {iframe}
-    {embed}
+    <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/zJF7A72UyA">pic.twitter.com/zJF7A72UyA</a></p>&mdash; 1v9.GG (@1v9GG_) <a href="https://twitter.com/1v9GG_/status/1719103184864415746?ref_src=twsrc%5Etfw">October 30, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
     </center>
 </body>
 </html>
 
-""")
-name=input("name: ")
-with open(f'./{name}.html', 'w') as f:
-    lines = htmlbody
-    f.writelines(lines)
-os.system("git add .")
-os.system("git commit -m gg")
-os.system("git push")
-console.print_step(f"https://hpmed1.github.io/board/{name}")
-while True:
-    if input() == "q":
-        break
