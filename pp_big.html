@@ -1,12 +1,4 @@
-import os
-import console
-iframe = input("iframe/site: ")
-if iframe.startswith("<"):
-    iframe=iframe
-else:
-    iframe = f'<iframe src="{iframe}">'
-embed = input("embed: ")
-htmlbody = (f"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,17 +14,8 @@ htmlbody = (f"""<!DOCTYPE html>
 </head>
 <body>
     <center>
-    {iframe}
-    {embed}
+    <blockquote class="reddit-embed-bq" style="height:316px" data-embed-theme="dark" data-embed-height="408"><a href="https://www.reddit.com/r/CAIRO/comments/17j2x2b/filmmaking_groups/">Filmmaking groups</a><br> by<a href="https://www.reddit.com/user/meehhh1/">u/meehhh1</a> in<a href="https://www.reddit.com/r/CAIRO/">CAIRO</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
+    
     </center>
 </body>
 </html>
-""")
-name=input()
-with open(f'./{name}.html', 'w') as f:
-    lines = htmlbody
-    f.writelines(lines)
-os.system("git add .")
-os.system("git commit -m gg")
-os.system("git push")
-console.print_step(f"https://hpmed1.github.io/board/{name}")
