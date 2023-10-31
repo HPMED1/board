@@ -22,4 +22,4 @@ with open(f'./{name}.html', 'w') as f:
 os.system("git add .")
 os.system("git commit -m gg")
 os.system("git push")
-print_markdown(f"https://hpmed1.github.io/board/{name}")
+console.print_markdown(f"https://hpmed1.github.io/board/{name}")
