@@ -15,7 +15,7 @@ htmlbody = (f"""<!DOCTYPE html>
 </html>
 """)
 name=input()
-with open(f'./share/{name}.html', 'w') as f:
+with open(f'./{name}.html', 'w') as f:
     lines = htmlbody
     f.writelines(lines)
 os.system("git add .")
