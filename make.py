@@ -1,4 +1,5 @@
 import os
+import console
 ifreame = input()
 htmlbody = (f"""<!DOCTYPE html>
 <html lang="en">
@@ -21,3 +22,4 @@ with open(f'./{name}.html', 'w') as f:
 os.system("git add .")
 os.system("git commit -m gg")
 os.system("git push")
+print_markdown(f"https://hpmed1.github.io/board/{name}")
