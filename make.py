@@ -9,24 +9,30 @@ embed = input("embed: ")
 htmlbody = (f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="share.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="msapplication-TileImage" content="prof.png">
     <meta property="og:site_name" content="HPMED's board">
     <meta property="og:title" content="I think i got something funny for you">
-    <meta property="og:image" itemprop="image" content="prof.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
     <title>HPMED's board</title>
-</head>
+    </head>
+<style>
+    body {{
+      background-color: #2c2f33;
+    }}
+    h1{{
+        color: white;
+    }}
+  </style>
 <body>
     <center>
+    <h1>Welcome to my board, where I share shit that I think is funny</h1>
     {iframe}
     {embed}
     </center>
 </body>
 </html>
+
 """)
 name=input()
 with open(f'./{name}.html', 'w') as f:
