@@ -1,6 +1,11 @@
 import os
 import console
-ifreame = input()
+iframe = input("iframe/site: ")
+if iframe.startswith("<"):
+    iframe=iframe
+else:
+    iframe = f'<iframe src="{iframe}">'
+embed = input("embed: ")
 htmlbody = (f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +23,8 @@ htmlbody = (f"""<!DOCTYPE html>
 </head>
 <body>
     <center>
-    {ifreame}
+    {iframe}
+    {embed}
     </center>
 </body>
 </html>
